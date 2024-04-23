@@ -7,20 +7,55 @@
 ##  by Danila O. Revin and Andrei V. Zavarnitsine
 #
 ##  Date: April 15, 2024
+
+
+##  Every section of the following code can be copy-pasted into a working GAP session
+##  A command output is given after a single '#' 
+##  A comment is given after a double '#' 
+
+##  This section relates to proof of Lemma 3(i)
+#
+##  We check that m(nX,nX,pA)>0 for the almost simple group G=Aut(S),
+##  where S is a sporadic group such that the triple (S,nX,p) is one of 
+#
+## ( M_12, 2C, 11 ), ( M_22, 2C, 11 ), ( J_2, 2C, 7 ), ( J_3, 2B, 19 ),
+## ( O'N, 2B, 31), ( HS, 2D, 11 ), ( HN, 2C, 19 ).
 #
 
+C:=CharacterTable( "M12.2" );;
+ClassMultiplicationCoefficient( C, C.2c, C.2c, C.11a ); # 11
+
+C:=CharacterTable( "M22.2" );;
+ClassMultiplicationCoefficient( C, C.2c, C.2c, C.11a ); # 11
+
+C:=CharacterTable( "J2.2" );;
+ClassMultiplicationCoefficient( C, C.2c, C.2c, C.7a );  # 7
+
+C:=CharacterTable( "J3.2" );;
+ClassMultiplicationCoefficient( C, C.2b, C.2b, C.19a ); # 19
+
+C:=CharacterTable( "ON.2" );;
+ClassMultiplicationCoefficient( C, C.2b, C.2b, C.31a ); # 31
+
+C:=CharacterTable( "HS.2" );;
+ClassMultiplicationCoefficient( C, C.2d, C.2d, C.11a ); # 11
+
+C:=CharacterTable( "HN.2" );;
+ClassMultiplicationCoefficient( C, C.2c, C.2c, C.19a ); # 19
+
+#
+##
+
+
+
+
+##  This section relates to the proof of main result, case (S, nX) = (Suz, 3A)
 #
 ##  We check that every pair of elements in the conjugacy class 3A of the sporadic group Suz
 ##  generates one of the following groups:
 #
 ##  C_3, C_3 x C_3, A_4, A_5, SL(2,3)
 #
-
-##  The following code can be copy-pasted as is into a working GAP session
-##  A command output is given after a single '#' 
-##  A comment is given after a double '#' 
-
-### BEGIN ###
 
 Suz := AtlasGroup( "Suz" );;                ##  Suz constructed from the online Atlas data
 Generators := GeneratorsOfGroup( Suz );;    ##  Standard generators of Suz
@@ -63,4 +98,6 @@ IdGroup( Group( t, Representatives[3] ) ); # [ 24, 3 ]   ##  SL(2,3)
 IdGroup( Group( t, Representatives[6] ) ); # [ 9, 2 ]    ##  C3 x C3
 IdGroup( Group( t, Representatives[7] ) ); # [ 3, 1 ]    ##  C3
 
-### END ###
+#
+##
+### 

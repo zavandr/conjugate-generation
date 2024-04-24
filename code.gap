@@ -1,20 +1,20 @@
 ###
 ##  This code for GAP ( version 4.13.0 of 2024-03-15 ) accompanies the paper
 ##  
-##  Conjugate generation of sporadic almost simple groups
+##  "Conjugate generation of sporadic almost simple groups"
 ## 
 ##  by Danila O. Revin and Andrei V. Zavarnitsine
 ##
 ##  Date: April 15, 2024
 
 ##  Every section of the following code can be copy-pasted into a working GAP session
-##  A command output is given after a single '#' 
+##  The output of a command is given after a single '#' 
 ##  A comment is given after a double '#' 
 
 ###  
-##  This section relates to proof of Lemma 3(i)
+##  This section relates to the proof of Lemma 3(i)
 ##
-##  We check that m( nX, nX, pA ) > 0 for the almost simple group G=Aut(S),
+##  We check that m( nX, nX, pA ) > 0 for the almost simple group G = Aut( S ),
 ##  where S is a sporadic group such that the triple ( S, nX, p ) is one of 
  
 ## ( M_12, 2C, 11 ), ( M_22, 2C, 11 ), ( J_2, 2C, 7 ), ( J_3, 2B, 19 ),
@@ -42,9 +42,9 @@ C:=CharacterTable( "HN.2" );;
 ClassMultiplicationCoefficient( C, C.2c, C.2c, C.19a ); # 19
 
 ###
-
-###
 ##  This section relates to the proof of Theorem 1
+##
+##  We check that certain class multiplication coefficitens are nonzero
 
 ## Case ( S, nX ) = ( McL, 2B )
 

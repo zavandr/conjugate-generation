@@ -107,7 +107,7 @@ Size( Centr_t ); # 9797760         ## The order of the centralizer is 9797760
                                    ## which confirms that t is in 3A
 
 ## The obits of Suz on pairs of elements in class 3A are
-## in a bijection with the orbits  Cent_t on 3A
+## in a bijection with the orbits of Cent_t on 3A
 
 ConjClass_t := ConjugacyClass( Suz, t );; ## The conjugacy class of t in Suz ( which is 3A ) 
 

@@ -5,14 +5,14 @@
 ## 
 ##  by Danila O. Revin and Andrei V. Zavarnitsine
 ##
-##  Date: April 15, 2024
+##  Date: January 16, 2025
 
 ##  Every section of the following code can be copy-pasted into a working GAP session
 ##  The output of a command is given after a single '#' 
 ##  A comment is given after a double '#' 
 
 ###  
-##  This section relates to the proof of Lemma 3(i)
+##  This section relates to the proof of Lemma 2(i)
 ##
 ##  We check that m( nX, nX, pA ) > 0 for the almost simple group G = Aut( S ),
 ##  where S is a sporadic group such that the triple ( S, nX, p ) is one of 
@@ -42,51 +42,8 @@ C:=CharacterTable( "HN.2" );;
 ClassMultiplicationCoefficient( C, C.2c, C.2c, C.19a ); # 19
 
 ###
-##  This section relates to the proof of Theorem 1
+##  This section relates to the proof of Proposition 1
 ##
-##  We check that certain class multiplication coefficitens are nonzero
-
-## Case ( S, nX ) = ( McL, 2B )
-
-C:=CharacterTable( "Mcl.2" );;
-ClassMultiplicationCoefficient( C, C.2b, C.2b, C.14a );  # 14
-ClassMultiplicationCoefficient( C, C.2b, C.14a, C.22a ); # 16236
-
-## Case ( S, nX ) = ( He, 2C )
-
-C:=CharacterTable( "He.2" );;
-ClassMultiplicationCoefficient( C, C.2c, C.2c, C.14b ); # 14
-
-## Case ( S, nX ) = ( Suz, 2C )
-
-C:=CharacterTable( "Suz.2" );;
-ClassMultiplicationCoefficient( C, C.2c, C.2c, C.7a );  # 7
-ClassMultiplicationCoefficient( C, C.2c, C.7a, C.22a ); # 3630
-
-## Case ( S, nX ) = ( Suz, 2D )
-
-C:=CharacterTable( "Suz.2" );;
-ClassMultiplicationCoefficient( C, C.2d, C.2d, C.14a ); # 14
-
-## Case ( S, nX ) = ( Fi22, 2E )
-
-C:=CharacterTable( "Fi22.2" );;
-ClassMultiplicationCoefficient( C, C.2e, C.2e, C.16a ); # 16
-
-## Case ( S, nX ) = ( Fi22, 2F )
-
-C:=CharacterTable( "Fi22.2" );;
-ClassMultiplicationCoefficient( C, C.2f, C.2f, C.11a );  # 11
-ClassMultiplicationCoefficient( C, C.2f, C.11a, C.42a ); # 1867488
-
-## Case ( S, nX ) = (Fi′24, 2D)
-
-C:=CharacterTable( "Fi24" );;
-ClassMultiplicationCoefficient( C, C.2d, C.2d, C.33a );  # 33
-ClassMultiplicationCoefficient( C, C.2d, C.33a, C.46a ); # 172322171820
-
-## Case ( S, nX ) = ( Suz, 3A )
-
 ## We check that every pair of elements in the conjugacy class 3A of the sporadic group Suz
 ## generates one of the following groups:
 
@@ -132,5 +89,51 @@ IdGroup( Group( t, Representatives[2] ) ); # [ 12, 3 ]   ##  A4
 IdGroup( Group( t, Representatives[3] ) ); # [ 24, 3 ]   ##  SL(2,3)
 IdGroup( Group( t, Representatives[6] ) ); # [ 9, 2 ]    ##  C3 x C3
 IdGroup( Group( t, Representatives[7] ) ); # [ 3, 1 ]    ##  C3
+
+###
+##  This section relates to the proof of Proposition 2
+##
+##  We check that certain class multiplication coefficitens are nonzero
+
+## Case ( S, nX ) = ( McL, 2B )
+
+C:=CharacterTable( "Mcl.2" );;
+ClassMultiplicationCoefficient( C, C.2b, C.2b, C.14a );  # 14
+ClassMultiplicationCoefficient( C, C.2b, C.14a, C.22a ); # 16236
+
+## Case ( S, nX ) = ( He, 2C )
+
+C:=CharacterTable( "He.2" );;
+ClassMultiplicationCoefficient( C, C.2c, C.2c, C.14b ); # 14
+
+## Case ( S, nX ) = ( Suz, 2C )
+
+C:=CharacterTable( "Suz.2" );;
+ClassMultiplicationCoefficient( C, C.2c, C.2c, C.7a );  # 7
+ClassMultiplicationCoefficient( C, C.2c, C.7a, C.22a ); # 3630
+
+## Case ( S, nX ) = ( Suz, 2D )
+
+C:=CharacterTable( "Suz.2" );;
+ClassMultiplicationCoefficient( C, C.2d, C.2d, C.14a ); # 14
+
+## Case ( S, nX ) = ( Fi22, 2E )
+
+C:=CharacterTable( "Fi22.2" );;
+ClassMultiplicationCoefficient( C, C.2e, C.2e, C.16a ); # 16
+
+## Case ( S, nX ) = ( Fi22, 2F )
+
+C:=CharacterTable( "Fi22.2" );;
+ClassMultiplicationCoefficient( C, C.2f, C.2f, C.11a );  # 11
+ClassMultiplicationCoefficient( C, C.2f, C.11a, C.42a ); # 1867488
+
+## Case ( S, nX ) = (Fi′24, 2D)
+
+C:=CharacterTable( "Fi24" );;
+ClassMultiplicationCoefficient( C, C.2d, C.2d, C.33a );  # 33
+ClassMultiplicationCoefficient( C, C.2d, C.33a, C.46a ); # 172322171820
+
+## Case ( S, nX ) = ( Suz, 3A )
 
 ### END ###
